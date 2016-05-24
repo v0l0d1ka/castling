@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Chess</title>
+<meta http-equiv = "Content-type" content = "text/html; charset = UTF-8" />
+<link rel="stylesheet" type="text/css" href="styles/reset.css" />
+<link rel="stylesheet" type="text/css" href="styles/default.css" />
+<!--google fonts-->
+<link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<style>
+      #map-canvas {
+        width: 400px;
+        height: 400px;
+        margin-left: 25px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(47.025445, 28.819245),
+          zoom: 18,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+<body>
+	<div id = "page">
+		<div id = "header">
+			<div id = "logo">
+				<img src="images/chess_club_logo.png" alt = "logo" />
+			</div>
+			<div id = "nav">
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="players.html">Игроки</a></li>
+					<li><a href="matches.html">Турниры</a></li>
+					<li><a href="play.html">Партии</a></li>
+					<li><a href="contact.html">Контакты</a></li>
+				</ul>
+			</div>
+			<!--
+			
+		-->
+		</div>
+		<div id = "main_content">
+			<div id = "left_sidebar">
+				<h2>Последние новости</h2>
+					<ul>
+						<li class = "news">
+							<h3>Дубай: гроссмейстерская пауза на финише вывела Драгана Шолака на первое место (ПАРТИИ)<span>By Jack Son | 11:55 AM</span></h3>
+							<p>
+								<strong>16</strong>
+								В Дубае состоялась развязка опен-турнира, запомнившегося, помимо прочего, скандалом с выявлением мошенничества одного из участников. Перед заключительным туром лидировала группа из пяти гроссмейстеров. Драган Шолак и ...
+								<a href="http://chess-news.ru/node/18638">Read more...</a>
+							</p>
+						</li>
+						<li class = "news">
+							<h3>Двукратный чемпион Грузии Гайоз Нигалидзе пойман на читерстве<span>By Jack Son | 11:55 AM</span></h3>
+							<p>
+								<strong>18</strong>
+								В эти дни в Дубае проходит крупный опен-турнир с участием 22 "шестисотников". Возглавляют стартовый рейтинг-список Дэвид Хауэлл 2687, Владимир Федосеев 2674, Игорь Коваленко 2665, Тигран Петросян 2660...
+
+Именно армянский гроссмейстер со столь знаменитым сочетанием имени и фамилии стал одним из двух главных героев минувшего игрового дня. Петросян играл белыми с грузинским гроссмейстером...
+								<a href="http://chess-news.ru/node/18608">Read more...</a>
+							</p>
+						</li>
+						<li class = "news">
+							<h3>Каспаров и Шорт снова сыграют матч - в быстрые шахматы и блиц<span>By Jack Son | 11:55 AM</span></h3>
+							<p>
+								<strong>20</strong>
+								25 и 26 апреля в Сент-Луисе состоится выставочный матч между Гарри Каспаровым и Найджелом Шортом. Сообщается, что всего будет сыграно десять партий: каждый день по одной быстрой (с контролем 25+10) и четыре блиц (5+3). Напомним, что это не первая подобная встреча старых друзей-соперников: в 2011-м они же сыграли восемь блицпартий в Лёвене, этот поединок 
+								<a href="http://chess-news.ru/node/18553">Read more...</a>
+							</p>
+						</li>
+					</ul>
+					<h2>Полезные ссылки</h2>
+					<ul class = "resources">
+						<li><a href="http://www.crestbook.com">Crestbook.com</a></li>
+						<li><a href="http://www.fide.com">FIDE</a></li>
+						<li><a href="http://www.chessclub.com/">The Internet Chess Club</a></li>
+						<li><a href="http://sahmoldova.md/?lang=ru">Федерация шахмат</a></li>
+						<li><a href="http://en.wikipedia.org/wiki/Chess">Wikipedia</a></li>
+						<li><a href="http://chess-news.ru">Новости шахмат</a></li>
+					</ul>
+			</div>
+			<div id = "center">
+			 
+	           <form action = "/">
+				<fieldset>
+					<legend>Оставить сообщение</legend>
+					<label for = "login">Имя:</label><input type = "text" id = "login" value = "введите ваше имя" /><br />
+					<label for = "pswd">Фамилия:</label><input type = "text" id = "pswd" value = "введите фамилию" /><br />
+					<label for = "message">Сообщение:</label>
+					<textarea id="message" rows="10" cols="45">Введите ваше сообщение</textarea>
+					<input type = "submit" value = "Отправить" />
+				</fieldset>
+				<p>
+					<a href="#">Регистрация</a>
+				</p>
+			</form>
+
+			<div id="map-canvas"></div>
+             
+
+			</div>
+			
+			<div id = "right_sidebar">
+				<h2>Галлерея</h2>
+				<ul>
+					<li><img src="images/img2.png" alt = "image" /></li>
+					<li><img src="images/img3.png" alt = "image" /></li>
+					<li><img src="images/img4.jpg" alt = "image" /></li>
+				</ul>
+				<a href="#" class = "button">View more</a>
+				<h2>Проверь себя!</h2>
+				<ul class = "story">
+					<iframe width="220" scrolling="no" height="261" frameborder="0" src="http://www.shredderchess.com/online/playshredder/
+gdailytactics.php?mylang=en&mysize=22"></iframe>
+				</ul>
+				<a href="http://www.shredderchess.com/daily-chess-puzzle.html" class = "button">Решить больше</a>
+			</div>
+		</div>
+		<div id = "footer">
+			<div id = "footer_wrap">
+			<div class = "important">
+				<h2>Școala Sportivă Specializată nr.7 de Șah</h2>
+				<p>Chișinău, str.Vasile Lupu, 14</p>
+				<p>Tel.: (373 22) 592880</p>
+				<p>Director: Romcovici Victor</p>
+				<a href="#" class = "buttn">Read more</a>
+			</div>
+			<div class = "important">
+				<h2>Școala Sportivă de Șah Bălț</h2>
+				<p>str. Bul. Larisa 1-A </p>
+				<p>Tel.: (373 231) 43702</p>
+				<p>E-mail: chess-balti@mtc-bl.md</p>
+				<p>Director: Reznic Victor</p>
+				<a href="#" class = "buttn">Read more</a>
+			</div>
+			<div class = "important">
+				<h2>Școala sportivă Nr.3 Tiraspol</h2>
+				<p> str. Karl Marx 1-A</p>
+				<p>E-mail: galina.saprikina@mail.ru</p>
+				<a href="#" class = "buttn">Read more</a>
+			</div>
+			<div class = "shadow"><div></div><div></div><div></div></div>
+			<div class = "footer_nav">
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="players.html">Игроки</a></li>
+					<li><a href="matches.html">Турниры</a></li>
+					<li><a href="play.html">Партии</a></li>
+					<li><a href="contact.html">Контакты</a></li>
+				</ul>
+			</div>
+			<div class = "copyright">
+				<p>&copy;Все права защищены. 2015</p>
+			</div>
+			<div class = "author"><span>Дизайн сайта</span> <a href="#">TemplateWorld</a> и сделан для Вас <a href="#">  G. Vladimir</a> 
+			</div>
+		</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
